@@ -37,3 +37,13 @@ async function fetchLocation(location) {
     return { name, condition, localTime, tempC, tempF, humidity,
              windKph, windMph, icon, weatherDays };
 }
+
+document.querySelector(".search-input").addEventListener("keyup", (e) => {
+    if (e.key === "Enter") {
+        fetchLocation(document.querySelector(".search-input").value);
+    }
+});
+
+document.querySelector(".search").addEventListener("click", () => {
+    fetchLocation(document.querySelector(".search-input").value);
+});
