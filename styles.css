@@ -19,6 +19,7 @@ body {
     width: 80vw;
     height: 60vh;
     border-radius: 16px;
+    padding: 16px;
 }
 
 .content-upper {
@@ -28,14 +29,12 @@ body {
 
 .current-info {
     display: grid;
-    grid-template-rows: repeat(4, 1fr);
     justify-content: center;
     align-items: center;
 }
 
 .extra-info {
     display: grid;
-    grid-template-rows: repeat(2, 1fr);
     justify-content: center;
     align-items: center;
 }
@@ -59,11 +58,39 @@ body {
 
 .day {
     display: grid;
-    grid-template-rows: repeat(3, 1fr);
-    justify-content: center;
-    align-items: center;
+    padding: 8px;
 }
 
 .search {
     cursor: pointer;
+}
+
+.city, .date {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.condition, .temperature {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.humidity, .wind {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.day>div>:nth-child(1),
+.day>div>:nth-child(3) {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.day>div>:nth-child(2),
+.day>div>:nth-child(4) {
+    font-size: 22px;
+    margin-bottom: 8px;
 }
